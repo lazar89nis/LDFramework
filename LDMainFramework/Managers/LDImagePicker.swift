@@ -17,7 +17,7 @@ open class LDImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigatio
     open var imageSelectionInProgress = false
     open var imageSelectCompletitionHandler:CompletionHandler?
     
-    open static let shared: LDImagePicker =
+    public static let shared: LDImagePicker =
         {
             let instance = LDImagePicker()
             return instance

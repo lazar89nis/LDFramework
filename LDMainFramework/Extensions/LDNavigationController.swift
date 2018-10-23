@@ -118,7 +118,7 @@ extension UINavigationController
     ///
     /// - Parameter controller: Provided UIViewController instance for which we are searching for top view controller.
     /// - Returns: Top UIViewController instance
-    static open func ldTopVC(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+    public static func ldTopVC(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
         if let navigationController = controller as? UINavigationController {
             return ldTopVC(controller: navigationController.visibleViewController)
         }
@@ -136,7 +136,7 @@ extension UINavigationController
     /// Find and return navigation controller which can be used for navigation in application.
     ///
     /// - Returns: UINavigationController instance, i.e. navigation controller which should be used for other methods in this extension.
-    static open func ldGetNC() -> UINavigationController
+    public static func ldGetNC() -> UINavigationController
     {
         return self.ldTopVC()!.navigationController!
     }

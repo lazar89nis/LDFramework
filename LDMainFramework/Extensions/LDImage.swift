@@ -144,7 +144,7 @@ extension UIImage
     ///
     /// - Parameter imageView: UIImageView from which the function returns the UIImage object.
     /// - Returns: UIImage object from UIImageView.
-    static open func ldVisibleImage(from imageView: UIImageView) -> UIImage {
+    public static func ldVisibleImage(from imageView: UIImageView) -> UIImage {
         UIGraphicsBeginImageContext(imageView.frame.size)
         let context: CGContext? = UIGraphicsGetCurrentContext()
         imageView.layer.render(in: context!)

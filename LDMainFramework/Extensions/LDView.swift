@@ -52,7 +52,7 @@ extension UIView {
     ///
     /// - Parameter view: UIVIew inside which we are looking for a first responder
     /// - Returns: Found first responder
-    open static func ldFindFirstResponder(inView view: UIView) -> UIView? {
+    public static func ldFindFirstResponder(inView view: UIView) -> UIView? {
         for subView in view.subviews
         {
             if subView.isFirstResponder {

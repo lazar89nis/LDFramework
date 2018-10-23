@@ -14,7 +14,7 @@ extension UIColor
     ///
     /// - Parameter hex: The date that contains date value.
     /// - Returns: UIColor object for specific hex value of color.
-    static open func ldColorWithHex(_ hex:String) -> UIColor
+    public static func ldColorWithHex(_ hex:String) -> UIColor
     {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
