@@ -38,10 +38,10 @@ extension UIView {
         {
             viewHolder.addSubview(view)
             view.translatesAutoresizingMaskIntoConstraints = false
-            let topConstraint = NSLayoutConstraint(item: view, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: viewHolder, attribute: NSLayoutAttribute.top, multiplier: 1, constant: 0)
-            let bottomConstraint = NSLayoutConstraint(item: view, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: viewHolder, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: 0)
-            let leftConstraint = NSLayoutConstraint(item: view, attribute: NSLayoutAttribute.leading, relatedBy: NSLayoutRelation.equal, toItem: viewHolder, attribute: NSLayoutAttribute.leading, multiplier: 1, constant: 0)
-            let rightConstraint = NSLayoutConstraint(item: view, attribute: NSLayoutAttribute.trailing, relatedBy: NSLayoutRelation.equal, toItem: viewHolder, attribute: NSLayoutAttribute.trailing, multiplier: 1, constant: 0)
+            let topConstraint = NSLayoutConstraint(item: view, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: viewHolder, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: 0)
+            let bottomConstraint = NSLayoutConstraint(item: view, attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: viewHolder, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: 0)
+            let leftConstraint = NSLayoutConstraint(item: view, attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: viewHolder, attribute: NSLayoutConstraint.Attribute.leading, multiplier: 1, constant: 0)
+            let rightConstraint = NSLayoutConstraint(item: view, attribute: NSLayoutConstraint.Attribute.trailing, relatedBy: NSLayoutConstraint.Relation.equal, toItem: viewHolder, attribute: NSLayoutConstraint.Attribute.trailing, multiplier: 1, constant: 0)
             
             viewHolder.addConstraints([topConstraint, bottomConstraint, leftConstraint, rightConstraint])
         }

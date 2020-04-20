@@ -109,14 +109,14 @@ open class LDSocialNetworkURL: NSObject {
         {
             if UIApplication.shared.canOpenURL(URL(string: self.appUrl())!)
             {
-                UIApplication.shared.openURL(URL(string: self.appUrl())!)
+                UIApplication.shared.open(URL(string: self.appUrl())!, options: [:], completionHandler: nil)
             }
         }
         else
         {
             if UIApplication.shared.canOpenURL(URL(string: self.link)!)
             {
-                UIApplication.shared.openURL(URL(string: self.link)!)
+                UIApplication.shared.open(URL(string: self.link)!, options: [:], completionHandler: nil)
             }
         }
         

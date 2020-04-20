@@ -128,17 +128,17 @@ open class LDImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigatio
         picker.dismiss(animated: true) {
             if picker.allowsEditing
             {
-                if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
-                    if let completiton = self.imageSelectCompletitionHandler
+                if let image = info[UIImagePickerController.InfoKey.editedImage.rawValue] as? UIImage {
+                    if let completion = self.imageSelectCompletitionHandler
                     {
-                        completiton(true, self.fixOrientation(img: image))
+                        completion(true, self.fixOrientation(img: image))
                     }
                 }
             } else {
-                if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-                    if let completiton = self.imageSelectCompletitionHandler
+                if let image = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage {
+                    if let completion = self.imageSelectCompletitionHandler
                     {
-                        completiton(true, self.fixOrientation(img: image))
+                        completion(true, self.fixOrientation(img: image))
                     }
                 }
             }
@@ -148,9 +148,9 @@ open class LDImagePicker: NSObject, UIImagePickerControllerDelegate, UINavigatio
     public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         
         picker.dismiss(animated: true, completion: {
-            if let completiton = self.imageSelectCompletitionHandler
+            if let completion = self.imageSelectCompletitionHandler
             {
-                completiton(false, nil)
+                completion(false, nil)
             }
         })
     }

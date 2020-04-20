@@ -105,9 +105,9 @@ open class LDDialog: NSObject
     ///   - alertButtonTitles: Array with alert button titles. Default array is empty array. Default alert button title is empty string ("")
     ///   - alertButtonActions: Array with alert button actions. Default array is empty array. Default value for single action in the array is nil.
     ///   - alertButtonStyles: Array with alert button styles. Default array is empty array. Default value for UIAlertActionStyle instance in array is .default. Note: Dialog can have only one action button with .cancel style.
-    public static func showDialogWithMultipleActions(message: String, title: String, alertButtonTitles:[String], alertButtonActions:[((UIAlertAction) -> Void)?], alertButtonStyles:[UIAlertActionStyle] = [])
+    public static func showDialogWithMultipleActions(message: String, title: String, alertButtonTitles:[String], alertButtonActions:[((UIAlertAction) -> Void)?], alertButtonStyles:[UIAlertAction.Style] = [])
     {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         
         for i in 0...alertButtonTitles.count-1
         {
